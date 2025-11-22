@@ -1,52 +1,206 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Quiz App - React Native
 
-# Getting Started
+A comprehensive mobile quiz application built with React Native, TypeScript, and Redux Toolkit. This app provides an engaging learning platform with multiple test formats, offline capabilities, and social features.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 🚀 Features
 
-## Step 1: Start Metro
+### Core Features
+- **Multiple Test Formats**: MCQ, True/False, Match, Categorize, and Arrange questions
+- **Offline Mode**: Download tests and take them offline with automatic sync
+- **Course Management**: Browse courses, track progress, and manage enrollments
+- **User Authentication**: Secure login/register with biometric authentication support
+- **Real-time Analytics**: Track performance, view detailed test results and statistics
+- **Social Features**: Forums, groups, leaderboards, and user profiles
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Technical Features
+- **Redux State Management**: Centralized state with Redux Toolkit
+- **Offline-First Architecture**: AsyncStorage for local data persistence
+- **Push Notifications**: Firebase Cloud Messaging integration
+- **Payment Gateway**: Razorpay integration for course purchases
+- **Network Optimization**: Smart caching and adaptive loading
+- **Error Handling**: Comprehensive error boundaries and recovery
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 📱 Screenshots & Demo
 
-```sh
-# Using npm
+[Add your app screenshots here]
+
+## 🛠️ Tech Stack
+
+- **Framework**: React Native 0.82
+- **Language**: TypeScript
+- **State Management**: Redux Toolkit
+- **Navigation**: React Navigation
+- **Storage**: AsyncStorage, SQLite
+- **Notifications**: Firebase Cloud Messaging
+- **Authentication**: JWT + Biometric
+- **Payment**: Razorpay
+- **Testing**: Jest + React Native Testing Library
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (v16 or higher)
+- npm or Yarn
+- React Native CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development, macOS only)
+- JDK 11 or higher
+
+Complete the [React Native Environment Setup](https://reactnative.dev/docs/set-up-your-environment) guide for detailed instructions.
+
+## 🚀 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Shrijeetsd/quiz_app.git
+cd quiz_app
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Install iOS dependencies (macOS only)
+
+```bash
+cd ios
+bundle install
+bundle exec pod install
+cd ..
+```
+
+## 🏃 Running the App
+
+### Start Metro Bundler
+
+```bash
 npm start
-
-# OR using Yarn
+# or
 yarn start
 ```
 
-## Step 2: Build and run your app
+### Run on Android
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+```bash
 npm run android
-
-# OR using Yarn
+# or
 yarn android
 ```
 
+### Run on iOS (macOS only)
+
+```bash
+npm run ios
+# or
+yarn ios
+```
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run with coverage
+npm test -- --coverage
+
+# Run in watch mode
+npm test -- --watch
+```
+
+## 📁 Project Structure
+
+```
+quiz_app/
+├── src/
+│   ├── components/       # Reusable components
+│   ├── screens/          # Screen components
+│   ├── navigation/       # Navigation configuration
+│   ├── services/         # API and business logic
+│   ├── store/           # Redux store and slices
+│   ├── types/           # TypeScript type definitions
+│   ├── constants/       # App constants and colors
+│   └── hooks/           # Custom React hooks
+├── android/             # Android native code
+├── ios/                 # iOS native code
+└── __tests__/          # Test files
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+API_BASE_URL=https://your-api-url.com
+RAZORPAY_KEY=your_razorpay_key
+FIREBASE_API_KEY=your_firebase_key
+```
+
+### Firebase Setup
+
+1. Create a Firebase project
+2. Add Android/iOS apps to Firebase
+3. Download `google-services.json` (Android) and `GoogleService-Info.plist` (iOS)
+4. Place them in respective folders
+
+## 📦 Build for Production
+
+### Android
+
+```bash
+cd android
+./gradlew assembleRelease
+```
+
+The APK will be generated at: `android/app/build/outputs/apk/release/`
+
 ### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+cd ios
+xcodebuild -workspace CommerceGateApp.xcworkspace -scheme CommerceGateApp -configuration Release
 ```
 
-Then, and every time you update your native dependencies, run:
+## 🤝 Contributing
 
-```sh
-bundle exec pod install
-```
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👥 Author
+
+**Shrijeet**
+- GitHub: [@Shrijeetsd](https://github.com/Shrijeetsd)
+
+## 🙏 Acknowledgments
+
+- React Native Community
+- Redux Toolkit Team
+- All contributors and supporters
+
+## 📞 Support
+
+For support, email shrijeetsd@gmail.com or create an issue in this repository.
+
+---
+
+Made with ❤️ using React Native
 
 For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
 
